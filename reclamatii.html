@@ -1,0 +1,62 @@
+<section class="contact" id="contact">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script> </script>
+
+  
+      <h2 style="color: rgb(166, 0, 255);">Reclamatii</h2>
+      <p style="color: rgb(255, 255, 255);">Off imi pare rau daca nu ti-a placut ceva, mereu am <br> incercat sa te  bucur cu tot ce am putut, daca ai totusi <br> o reclamatie de facut, o poti face mai jos.</p>
+              <link rel="stylesheet" href="style.css">
+     <form id="contact-form">
+                      <link rel="stylesheet" href="style.css">
+  <input type="text" name="user_name" placeholder="Nume" required>
+  <input type="email" name="user_email" placeholder="Email" required>
+  <textarea name="message" placeholder="Mesajul" required></textarea>
+  <button style="color: rgb(166, 0, 255);" type="submit">Trimite reclamatia</button>
+
+    <a style="color: rgb(255, 255, 255);" href="pagina4.html" target="_blank"> <br> Intoarce-te</a>
+</form>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("0_pj5kqoBRT2ZHB0W");
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_bwt9mkq", "template_bpurt6m", this)
+      .then(function() {
+        alert("Mesaj trimis!");
+      }, function(error) {
+        alert("Eroare: " + error.text);
+      });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+    <style>
+body {
+  margin: 0;
+  height: 80vh;
+  background-image: url("images/home-bg.jpg"); /* poza din folder */
+  background-size: cover;       /* umple tot ecranul */
+  background-position: center;  /* centrat */
+  background-repeat: no-repeat; /* fără repetare */
+}
+</style>

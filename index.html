@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Acces</title>
+</head>
+<body>
+
+    <section class="about" id="about">
+<div class="content">
+<h2 style="color: rgb(166, 0, 255);">Parola necesara</h2>
+                <link rel="stylesheet" href="style.css">
+
+<input style="color: rgb(166, 0, 255);" type="password" id="parola" placeholder="Introdu parola">
+<button style="color: rgb(166, 0, 255);" onclick="login()">Apasa</button>
+
+<p id="msg" style="color:red;"></p>
+
+<script>
+function login() {
+    const parolaCorecta = "25052025"; // ← schimbă aici
+    const input = document.getElementById("parola").value;
+
+    if (input === parolaCorecta) {
+        // deschide pagina ta în alt tab
+        window.open("1.html", "_blank");
+
+        // opțional: blochează pagina asta
+        document.body.innerHTML = "<h3>Acces permis ✔</h3>";
+    } else {
+        document.getElementById("msg").innerText = "Parola gresita!";
+                document.getElementById("msg").innerText = "hai ba ade cum sa nu stii..";
+    }
+}
+</script>
+</div>
+</section>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background-image: url("images/home-bg.jpg"); /* poza din folder */
+  background-size: cover;       /* umple tot ecranul */
+  background-position: center;  /* centrat */
+  background-repeat: no-repeat; /* fără repetare */
+}
+</style>
+
+</body>
+</html>
